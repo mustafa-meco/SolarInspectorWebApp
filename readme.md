@@ -4,7 +4,7 @@ This is Microservice1 of our project.
 
 # Project Flowchart
 
-![Diagram]('Solar Inspection Software Flowchart (2).png')
+![Diagram](SolarInspectionSoftwareFlowchart.png)
 
 This is Microservice1 of our project.
 
