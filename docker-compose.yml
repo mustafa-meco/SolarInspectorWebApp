@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  microservice1:
+    build:
+      context: ./microservice1
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=development
+      # Add other environment variables as needed
+    depends_on:
+      - database
+
+  database:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=your_root_password
+      - MYSQL_DATABASE=db_name
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
