@@ -1,6 +1,14 @@
-# Microservice1
+# Project Flowchart
+
+![Diagram](SolarInspectionSoftwareFlowchart.png)
 
 This is Microservice1 of our project.
+## getInputsService (Blue)
+## DefectDetectionService (Red)
+## DigitalMapService (Orange)
+## irProcessingService (Yellow)
+## processPlantDataService (Green)
+## rgbProcessingService (Turqoise)
 
 ## Setup
 
@@ -10,6 +18,7 @@ This is Microservice1 of our project.
     git clone https://github.com/your-username/your-repo.git
     cd your-repo
     ```
+
 
 2.  Start the services using Docker Compose:
 
