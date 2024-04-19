@@ -1,14 +1,14 @@
-# Microservice1
-
-This is Microservice1 of our project.
-
 # Project Flowchart
 
 ![Diagram](SolarInspectionSoftwareFlowchart.png)
 
 This is Microservice1 of our project.
-
-
+## getInputsService (Blue)
+## DefectDetectionService (Red)
+## DigitalMapService (Orange)
+## irProcessingService (Yellow)
+## processPlantDataService (Green)
+## rgbProcessingService (Turqoise)
 
 ## Setup
 
