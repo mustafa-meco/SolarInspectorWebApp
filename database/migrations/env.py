@@ -6,7 +6,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 # Replace this with your actual database URL
-SQLALCHEMY_DATABASE_URI = 'mysql://username:password@localhost/db_name'
+SQLALCHEMY_DATABASE_URI = "mysql://username:password@localhost/db_name"
 
 engine = create_engine(SQLALCHEMY_DATABASE_URI)
 Session = sessionmaker(bind=engine)
