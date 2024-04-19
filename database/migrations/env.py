@@ -1,5 +1,4 @@
 # database/migrations/env.py
-
 from alembic import context
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
