@@ -2,6 +2,14 @@
 
 This is Microservice1 of our project.
 
+# Project Flowchart
+
+![Diagram]('Solar Inspection Software Flowchart (2).png')
+
+This is Microservice1 of our project.
+
+
+
 ## Setup
 
 1.  Clone the repository:
@@ -10,6 +18,7 @@ This is Microservice1 of our project.
     git clone https://github.com/your-username/your-repo.git
     cd your-repo
     ```
+
 
 2.  Start the services using Docker Compose:
 
