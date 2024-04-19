@@ -4,8 +4,8 @@
 def add_numbers(a, b):
     """
 
-    :param a: 
-    :param b: 
+    :param a:
+    :param b:
 
     """
     return a + b
@@ -14,8 +14,8 @@ def add_numbers(a, b):
 def multiply_numbers(a, b):
     """
 
-    :param a: 
-    :param b: 
+    :param a:
+    :param b:
 
     """
     return a * b
@@ -24,7 +24,7 @@ def multiply_numbers(a, b):
 def greet_user(name):
     """
 
-    :param name: 
+    :param name:
 
     """
     return f"Hello, {name}!"
