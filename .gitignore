@@ -1,9 +1,10 @@
 # Ignore Python bytecode files
-   __pycache__/
+__pycache__/
+# Ignore environment-specific files
+.env
 
-   # Ignore environment-specific files
-   .env
+# Ignore Docker-related files
+docker-compose.yml
+Dockerfile
 
-   # Ignore Docker-related files
-   docker-compose.yml
-   Dockerfile
+venv
