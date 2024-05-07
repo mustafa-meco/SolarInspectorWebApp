@@ -7,7 +7,7 @@ from flask import Blueprint
 # main blueprint to be registered with application
 api = Blueprint('api', __name__)
 
-@app.route('/')
+@app.route('/t')
 def index():
     return render_template('index.html')
 
@@ -87,3 +87,54 @@ def getJsonFileByName():
     with open(f"src/jsons/{json_file}", 'r') as f:
         data = json.load(f)
     return jsonify(data)
+
+
+# Define a route for the web page
+@app.route('/')
+def upload_image_page():
+    return render_template('satellite_input.html')
+
+# Define a route to handle form submission
+import json
+
+@app.route('/uploadImage', methods=['POST'])
+def upload_image():
+    if request.method == 'POST':
+        # Retrieve data from the form
+        image_file = request.files['imageFile']
+        latitude_upper_left = request.form['latitude']
+        longitude_upper_left = request.form['longitude']
+        latitude_lower_right = request.form['latitudeLower']
+        longitude_lower_right = request.form['longitudeLower']
+
+        # Create a dictionary to store the data
+        data = {
+            'image_file': image_file.filename,
+            'latitude_upper_left': latitude_upper_left,
+            'longitude_upper_left': longitude_upper_left,
+            'latitude_lower_right': latitude_lower_right,
+            'longitude_lower_right': longitude_lower_right
+        }
+
+        # Print the data for verification
+        print('Data:', data)
+
+        # Save the data to a JSON file
+        file_path = os.path.join('src', 'jsons', 'satellite_data.json')
+        with open(file_path, 'w') as json_file:
+            json.dump(data, json_file)
+
+        # Here you can save the image and its details to a database or perform any other necessary actions
+
+        return 'Image uploaded successfully!'
+
+@app.route('/getSatelliteData', methods=['GET'])
+def getSatelliteData():
+    json_file_path = 'src/jsons/satellite_data.json'
+    if os.path.exists(json_file_path):
+        # Read the contents of the JSON file
+        with open(json_file_path, 'r') as file:
+            data = json.load(file)
+        return jsonify(data)
+    else:
+        return 'JSON file not found', 404
