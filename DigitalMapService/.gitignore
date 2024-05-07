@@ -1,2 +1,12 @@
+# Ignore Python bytecode files
+__pycache__/
+# Ignore environment-specific files
+.env
+
+# Ignore Docker-related files
+docker-compose.yml
+Dockerfile
+
 venv
 .env
+DigitalMapService/src/backend/segment_weights.pt
